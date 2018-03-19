@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { MemoryRouter } from 'react-router-dom';
 
-import { getPlayer, getGuild } from '../api/index';
-
-getPlayer('donut').then(data => console.dir(data));
-getGuild('inc').then(data => console.dir(data));
+import App from '../components/App.jsx';
 
 ReactDOM.render(
-  <p>Hello, world!</p>,
+  <MemoryRouter>
+    <App />
+  </MemoryRouter>,
   document.getElementById('app')
 )

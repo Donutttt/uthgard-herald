@@ -33,3 +33,25 @@ export const getPlayer = playerName => {
 export const getGuild = guildName => {
   return getFromApi(`guild/${guildName}`);
 };
+
+/**
+ * Gets search results for a player name.
+ * @param {string} playerName the player name to search by.
+ * @returns {promise} a promise of player data matching the search query.
+ */
+export const getPlayerSearchResults = playerName => getFromApi(`search/player/${playerName}`);
+
+
+/**
+ * Gets search results for a guild name.
+ * @param {string} guildName the guild name to search by.
+ * @returns {promise} a promise of guild data matching the search query.
+ */
+export const getGuildSearchResults = guildName => getFromApi(`search/guild/${guildName}`);
+
+export default {
+  getPlayer,
+  getGuild,
+  getPlayerSearchResults,
+  getGuildSearchResults,
+};
